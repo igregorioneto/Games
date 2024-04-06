@@ -1,0 +1,85 @@
+# Godot 4+ specific ignores
+.godot/
+# Godot-specific ignores
+*.import
+*.import.res
+*.import.cfg
+*.import.xml
+*.import.scene
+*.import.material
+*.imported.scene
+*.imported
+*.tscn.export
+*.tscn
+*.tres
+*.res
+*.scones
+*.scn
+*.srt
+
+# Editor-specific files
+*.import
+*.import.res
+*.import.cfg
+*.import.xml
+*.import.scene
+*.import.material
+*.imported.scene
+*.imported
+*.tscn.export
+*.tscn
+*.tres
+*.res
+*.scones
+*.scn
+*.srt
+
+# Cache and temporary files
+*.import.cfg
+*.import.xml
+*.imported
+*.imported.scene
+*.import.material
+*.import.res
+*.import
+*.lib
+*.msvc
+*.mono
+*.mono.temp
+*.obj
+*.opt
+*.pdb
+*.scones
+*.so
+*.system
+*.user
+*.user*
+*.suo
+*.tmp
+*.import*
+
+# Generated files
+*.gdns
+*.import
+*.import.res
+*.import.cfg
+*.import.xml
+*.imported.scene
+*.imported
+*.scn
+*.scones
+*.tscn
+*.tres
+
+# Exported files
+*.apk
+*.apks
+*.bat
+*.bin
+*.exe
+*.jar
+*.pck
+*.zip
+
+# Build files
+export.cfg
