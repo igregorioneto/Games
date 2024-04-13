@@ -5,9 +5,10 @@ using UnityEngine;
 public class RaqueteController : MonoBehaviour
 {
     private Vector3 minhaPosicao;
-    public float meuY;
+    private float meuY;
     public float velocidade;
     public float meuLimite;
+    public bool isPlayer1;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,16 +20,36 @@ public class RaqueteController : MonoBehaviour
     {
         minhaPosicao.y = meuY;
         transform.position = minhaPosicao;
+        float deltaVelocidade = velocidade * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.UpArrow) && meuY < meuLimite) 
+
+        if (Input.GetKey(KeyCode.UpArrow) && isPlayer1)
         {
             // Debug.Log("UP");
-            meuY += velocidade * Time.deltaTime;
+            meuY += deltaVelocidade;
         }
-        if (Input.GetKey(KeyCode.DownArrow) && meuY > -meuLimite)
+        if (Input.GetKey(KeyCode.DownArrow) && isPlayer1)
         {
             // Debug.Log("DOWN");
-            meuY -= velocidade * Time.deltaTime;
+            meuY -= deltaVelocidade;
+        }
+        if (Input.GetKey(KeyCode.W) && !isPlayer1)
+        {
+            meuY += deltaVelocidade;
+        }
+        if (Input.GetKey(KeyCode.S) && !isPlayer1)
+        {
+            meuY -= deltaVelocidade;
+        }
+
+        if (meuY < -meuLimite)
+        {
+            meuY = -meuLimite;
+        }
+
+        if (meuY > meuLimite) 
+        {
+            meuY = meuLimite;
         }
     }
 }
