@@ -11,7 +11,24 @@ public class BolaController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        minhaVelocidade.x = -velocidade;
+        int direcao = Random.Range(0,4);
+        if (direcao == 0)
+        {
+            minhaVelocidade.x = velocidade; 
+            minhaVelocidade.y = velocidade;
+        } else if (direcao == 1)
+        {
+            minhaVelocidade.x = -velocidade; 
+            minhaVelocidade.y = velocidade;
+        } else if (direcao == 2)
+        {
+            minhaVelocidade.x = -velocidade; 
+            minhaVelocidade.y = -velocidade;
+        } else if (direcao == 3)
+        {
+            minhaVelocidade.x = velocidade; 
+            minhaVelocidade.y = -velocidade;
+        }
         meuRB.velocity = minhaVelocidade;
     }
 
