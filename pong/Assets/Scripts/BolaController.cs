@@ -13,9 +13,33 @@ public class BolaController : MonoBehaviour
     public AudioClip boing;
     public Transform cameraTransform;
 
+    public float delay = 2f;
+    public bool jogoIniciado = true;
+
     
     // Start is called before the first frame update
     void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        delay -= Time.deltaTime;
+        if (delay <= 0 && !jogoIniciado)
+        {
+            jogoIniciado = true;
+            IniciarJogo();
+        }
+
+        if (transform.position.x >= limiteBola || transform.position.x <= -limiteBola)
+        {
+            SceneManager.LoadScene("Jogo");
+        }
+    }
+
+    public void IniciarJogo()
     {
         int direcao = Random.Range(0,4);
         if (direcao == 0)
@@ -36,15 +60,6 @@ public class BolaController : MonoBehaviour
             minhaVelocidade.y = -velocidade;
         }
         meuRB.velocity = minhaVelocidade;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (transform.position.x >= limiteBola || transform.position.x <= -limiteBola)
-        {
-            SceneManager.LoadScene("Jogo");
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D other) 
