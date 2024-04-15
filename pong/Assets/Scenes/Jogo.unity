@@ -784,9 +784,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d52620a2140a902da00dabb14889690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transformBola: {fileID: 0}
   velocidade: 5
   meuLimite: 3.4
   isPlayer1: 1
+  automatico: 0
 --- !u!61 &1602653718
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -908,9 +910,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d52620a2140a902da00dabb14889690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transformBola: {fileID: 749192410}
   velocidade: 5
   meuLimite: 3.4
   isPlayer1: 0
+  automatico: 0
 --- !u!212 &1625648786
 SpriteRenderer:
   m_ObjectHideFlags: 0
