@@ -379,6 +379,8 @@ MonoBehaviour:
   meuRB: {fileID: 749192411}
   velocidade: 5
   limiteBola: 12
+  boing: {fileID: 8300000, guid: 9fce9d1794fe6f0efaf5648d3cbe54fb, type: 3}
+  cameraTransform: {fileID: 519420032}
 --- !u!1 &1414318740
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,9 @@ public class BolaController : MonoBehaviour
     public float velocidade = 5f;
     public float limiteBola = 12;
 
+    public AudioClip boing;
+    public Transform cameraTransform;
+
     
     // Start is called before the first frame update
     void Start()
@@ -42,5 +45,10 @@ public class BolaController : MonoBehaviour
         {
             SceneManager.LoadScene("Jogo");
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        AudioSource.PlayClipAtPoint(boing, cameraTransform.position);
     }
 }
