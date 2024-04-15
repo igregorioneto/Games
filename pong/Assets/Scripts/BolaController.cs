@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BolaController : MonoBehaviour
 {
+    private Vector2 minhaVelocidade;
     public Rigidbody2D meuRB;
     public float velocidade = 5f;
-    private Vector2 minhaVelocidade;
+    public float limiteBola = 12;
+
     
     // Start is called before the first frame update
     void Start()
@@ -35,6 +38,9 @@ public class BolaController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (transform.position.x >= limiteBola || transform.position.x <= -limiteBola)
+        {
+            SceneManager.LoadScene("Jogo");
+        }
     }
 }
