@@ -15,11 +15,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Subir();
+        LimitandoVelocidade();
+    }
+
+    private void Subir()
+    {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             meuRB.velocity = Vector2.up * velocidade;
         }
+    }
 
+    private void LimitandoVelocidade()
+    {
         // Limitando a velocidade
         if (meuRB.velocity.y < -velocidade)
         {
