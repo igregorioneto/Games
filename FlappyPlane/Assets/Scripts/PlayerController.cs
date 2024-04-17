@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -34,5 +35,10 @@ public class PlayerController : MonoBehaviour
         {
             meuRB.velocity = Vector2.down * velocidade;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log("Colisão!");
+        SceneManager.LoadScene("Jogo");
     }
 }
