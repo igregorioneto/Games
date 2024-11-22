@@ -2,6 +2,7 @@ package io.drop.lwjgl3;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
+import io.drop.ControleSons;
 import io.drop.Main;
 import io.drop.MyGdxSound;
 
@@ -13,7 +14,7 @@ public class Lwjgl3Launcher {
     }
 
     private static Lwjgl3Application createApplication() {
-        return new Lwjgl3Application(new MyGdxSound(), getDefaultConfiguration());
+        return new Lwjgl3Application(new ControleSons(), getDefaultConfiguration());
     }
 
     private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
