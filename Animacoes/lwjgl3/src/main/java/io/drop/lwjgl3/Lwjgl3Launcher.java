@@ -4,6 +4,7 @@ import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import io.drop.AnimacaoGdx;
 import io.drop.Main;
+import io.drop.MovimentacaoPersonagem;
 
 /** Launches the desktop (LWJGL3) application. */
 public class Lwjgl3Launcher {
@@ -13,7 +14,7 @@ public class Lwjgl3Launcher {
     }
 
     private static Lwjgl3Application createApplication() {
-        return new Lwjgl3Application(new AnimacaoGdx(), getDefaultConfiguration());
+        return new Lwjgl3Application(new MovimentacaoPersonagem(), getDefaultConfiguration());
     }
 
     private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
@@ -21,7 +22,7 @@ public class Lwjgl3Launcher {
         configuration.setTitle("Animacoes");
         configuration.useVsync(true);
         configuration.setForegroundFPS(Lwjgl3ApplicationConfiguration.getDisplayMode().refreshRate + 1);
-        configuration.setWindowedMode(640, 480);
+        configuration.setWindowedMode(600, 480);
         configuration.setWindowIcon("libgdx128.png", "libgdx64.png", "libgdx32.png", "libgdx16.png");
         return configuration;
     }
