@@ -2,9 +2,7 @@ package io.drop.lwjgl3;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
-import io.drop.Main;
-import io.drop.StarfishCollectorAlpha;
-import io.drop.StarfishCollectorBeta;
+import io.drop.beta.StarfishCollectorBeta;
 
 /** Launches the desktop (LWJGL3) application. */
 public class Lwjgl3Launcher {

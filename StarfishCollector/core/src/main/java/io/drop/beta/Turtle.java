@@ -1,9 +1,7 @@
-package io.drop;
+package io.drop.beta;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
-
-import java.lang.annotation.Inherited;
 
 public class Turtle extends ActorBeta{
     public Turtle() {
